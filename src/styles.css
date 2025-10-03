@@ -1,0 +1,12 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+a { color: inherit; text-decoration: none; }
+nav { position: sticky; top: 0; backdrop-filter: blur(6px); padding: .75rem 1rem; border-bottom: 1px solid rgba(0,0,0,.1); }
+.container { max-width: 960px; margin: 0 auto; padding: 1rem; }
+.grid { display: grid; gap: 1rem; }
+.card { padding: 1rem; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; }
+.btn { display: inline-block; padding: .6rem 1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,.15); cursor: pointer; }
+.btn.primary { background: #4f46e5; color: white; border-color: transparent; }
+.badge { font-size: .75rem; padding: .2rem .5rem; border-radius: 6px; background: rgba(79,70,229,.12); }
