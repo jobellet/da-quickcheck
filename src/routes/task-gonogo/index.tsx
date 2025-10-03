@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useState, type ReactNode } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import { estimateRLParams } from '../../lib/api'
 import type { SessionData, Stim, Resp } from './types'
 import { makeSession, nextStim, stepTrial, type GoNoGoConfig } from './state'
@@ -91,13 +91,13 @@ export default function Page() {
             <div style={{opacity:.6}}>correct</div>
             <div style={{opacity:.6}}>reward</div>
             {session.trials.slice(-10).map(tr => (
-              <Fragment key={tr.t}>
+              <div key={`row-${tr.t}`} style={{display:'contents'}}>
                 <div>{tr.t + 1}</div>
                 <div>{tr.stim}</div>
                 <div>{tr.resp}</div>
                 <div>{tr.correct}</div>
                 <div>{tr.reward}</div>
-              </Fragment>
+              </div>
             ))}
           </div>
         </section>

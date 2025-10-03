@@ -81,13 +81,13 @@ export default function Page() {
             <div style={{opacity:.6}}>pA</div>
             <div style={{opacity:.6}}>pB</div>
             {session.trials.slice(-10).map(tr => (
-              <>
-                <div key={`t-${tr.t}`}>{tr.t+1}</div>
+              <div key={`row-${tr.t}`} style={{display:'contents'}}>
+                <div>{tr.t + 1}</div>
                 <div>{tr.choice}</div>
                 <div>{tr.reward}</div>
-                <div>{(tr.pA*100).toFixed(0)}%</div>
-                <div>{(tr.pB*100).toFixed(0)}%</div>
-              </>
+                <div>{(tr.pA * 100).toFixed(0)}%</div>
+                <div>{(tr.pB * 100).toFixed(0)}%</div>
+              </div>
             ))}
           </div>
         </section>
